@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '50px'
+      padding: '112px'
     },
     screens: {
       ph: '320px',
@@ -17,7 +17,7 @@ module.exports = {
       tb: '768px',
       md: '1024px',
       lg: '1200px',
-      xl: '1400px'
+      xl: '1468px'
     },
     fontFamily: {
       primary: 'var(--font-Montserrat)',
