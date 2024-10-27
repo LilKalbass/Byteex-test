@@ -8,16 +8,16 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '15px'
+      padding: '50px'
     },
     screens: {
       ph: '320px',
-      pl: '460px',
+      pl: '500px',
       sm: '640px',
       tb: '768px',
       md: '1024px',
       lg: '1200px',
-      xl: '1430px'
+      xl: '1400px'
     },
     fontFamily: {
       primary: 'var(--font-Montserrat)',
@@ -25,21 +25,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#100e0e'
-        },
-        secondary: {
-          DEFAULT: '#787f8a'
-        },
-        accent: {
-          DEFAULT: '#c7a17a',
-          hover: '#a08161'
-        }
+
       },
       backgroundImage: {
-        hero_overlay: 'url(/assets/hero/hero-overlay.png)',
-        opening_hours: 'url(/assets/opening-hours/bg.png)',
-        footer: 'url(/assets/footer/bg.png)'
+
       }
     },
   },
