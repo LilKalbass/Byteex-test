@@ -16,12 +16,12 @@ export const Hero = async () => {
     const testF = await getFeaturedTestimonial()
 
     return (
-        <section className='pt-8'>
+        <section className='pt-8 z-50'>
             <div className='container mx-auto'>
                 <div className='pb-[62px]'>
                     <Image src='/assets/Logo.svg' alt='logo_img' className='object-contain' width={200} height={36}/>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between relative '>
                     <div className='flex flex-col'>
                         <h1 className='text-[38px] leading-[46px] text-[#01005B] pb-[26px] max-w-[530px]'>
                             Don’t apologize for being comfortable.
@@ -46,11 +46,13 @@ export const Hero = async () => {
                                 </p>
                             </div>
                         </div>
-                        <button className='gap-x-2 hover:pl-2 transition-all duration-300 mb-[46px]'>
+                        <button className='gap-x-2 hover:pl-2 transition-all duration-300 mb-[142px]'>
                             Customize Your Outfit
                             <BsArrowRight className='text-2xl'/>
                         </button>
-                        <FeaturedTestimonial test = {testF} className='absolute'/>
+                        <div className='absolute -bottom-20'>
+                            <FeaturedTestimonial test={testF} />
+                        </div>
                     </div>
                     <div className='flex items-center'>
                         <HeroCarousel/>
