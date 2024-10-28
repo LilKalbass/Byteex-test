@@ -10,6 +10,6 @@
     @apply font-secondary bg-[#F9F0E5]
   }
   button {
-    @apply flex items-center justify-center bg-[#01005B] text-[#FFFFFF] text-[18px] leading-[24px] py-[18px] w-[332px] rounded-md
+    @apply flex items-center justify-center bg-[#01005B] text-[#FFFFFF] text-[18px] leading-[24px] py-[18px] w-[332px] h-[56px] rounded-md
   }
 }

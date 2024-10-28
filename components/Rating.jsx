@@ -9,9 +9,9 @@ export const Rating = ({ value}) =>
             stars[i] = <IoIosStar className='text-[24px]'/>;
         }
 
-        if (value % 1 != 0) {
-            stars[i - 1] = <IoIosStarHalf className='text-[24px]'/>;
-        }
+        // if (value % 1 != 0) {
+        //     stars[i - 1] = <IoIosStarHalf className='text-[24px]'/>;
+        // }
         return <div className='flex items-center gap-x-1'>
             <div className='flex items-center text-[#FFB801]'>{stars}</div>
         </div>;
