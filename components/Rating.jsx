@@ -6,7 +6,7 @@ export const Rating = ({ value}) =>
         const stars = Array.from({length: 5}, () => <IoIosStarOutline className='text-[24px]'/>);
         let i;
         for (i = 0; i < value; i++) {
-            stars[i] = <IoIosStar className='text-[24px]'/>;
+            stars[i] = <IoIosStar className='text-[16px]'/>;
         }
 
         // if (value % 1 != 0) {

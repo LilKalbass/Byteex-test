@@ -15,7 +15,7 @@ export const FeaturedTestimonial = ({test}) => {
                 </div>
                 <div className='flex items-center gap-x-2'>
                     <Rating value={test[0].rating}/>
-                    <p className='text-[10px] leading-[20px] text-[#828282] font-secondary'>
+                    <p className='text-[12px] leading-[20px] text-[#828282] font-secondary'>
                         One of 500+ 5 Star Reviews Online
                     </p>
                 </div>
