@@ -1,6 +1,6 @@
 import React from 'react'
-import {TbShoppingCartCheck, TbSunMoon, TbLeaf} from "react-icons/tb";
-import {BsArrowRight} from "react-icons/bs";
+import {TbShoppingCartCheck, TbSunMoon, TbTruck} from "react-icons/tb";
+import {BsArrowRight, BsTruck} from "react-icons/bs";
 import {Rating} from "@/components/Rating";
 
 export const Order = () => {
@@ -17,14 +17,14 @@ export const Order = () => {
                         </p>
                     </div>
                     <div className='flex flex-col items-center bg-[#F9F0E6] px-[36px] py-[78px] rounded-xl'>
-                        <TbShoppingCartCheck className='text-[#01005B] text-6xl'/>
+                        <BsTruck className='text-[#01005B] text-6xl'/>
                         <h4 className='text-[22px] leading-[40px] text-[#01005B] pb-[20px] pt-[16px]'>We ship.</h4>
                         <p className='text-[16px] leading-[24px] text-[#676869] max-w-[280px] text-center'>
                             We ship your items within 1-2 days of receiving your order.
                         </p>
                     </div>
                     <div className='flex flex-col items-center bg-[#F0EEEF] px-[36px] py-[78px] rounded-xl'>
-                        <TbShoppingCartCheck className='text-[#01005B] text-6xl'/>
+                        <TbSunMoon className='text-[#01005B] text-6xl'/>
                         <h4 className='text-[22px] leading-[40px] text-[#01005B] pb-[20px] pt-[16px]'>You enjoy!</h4>
                         <p className='text-[16px] leading-[24px] text-[#676869] max-w-[280px] text-center'>
                             Wear hernest around the house, out on the town, or in bed.
