@@ -25,19 +25,19 @@ export const Footer = async() => {
                 <CtaCarousel ctaData={ctaData}/>
                 <div className='pb-[18px] pt-[58px]'>
                     <button className='gap-x-2 hover:pl-2 transition-all duration-300 w-[374px]'>Customize Your Outfit<BsArrowRight className='text-2xl'/></button>
-                    <div className='flex items-center gap-x-4'>
+                    <div className='flex items-center gap-x-4 pt-2'>
                         <div className='flex items-center text-[#1FAD40] gap-x-1'>
                             <TbClockHour3 className='text-sm'/>
                             <p className='text-[10px] leading-[18px]'>Ships in 1-2 Days</p>
                         </div>
-                        <div className='flex gap-x-3 text-2xl '>
-                            <GrAmex />
-                            <FaApplePay/>
+                        <div className='flex gap-x-2 text-2xl items-center'>
+                            <GrAmex className='text-4xl'/>
+                            <FaApplePay className='text-4xl'/>
                             <FaCcDiscover/>
-                            <FaGooglePay/>
+                            <FaGooglePay className='text-3xl'/>
                             <FaCcMastercard/>
                             <FaPaypal/>
-                            <RiVisaLine/>
+                            <RiVisaLine className='text-3xl'/>
                         </div>
                     </div>
                 </div>
