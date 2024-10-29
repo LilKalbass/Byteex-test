@@ -6,8 +6,16 @@ import {GrAmex} from "react-icons/gr";
 import {FaApplePay, FaCcDiscover, FaCcMastercard, FaCcVisa, FaGooglePay, FaPaypal} from "react-icons/fa";
 import {RiVisaLine} from "react-icons/ri";
 import {GoShieldCheck} from "react-icons/go";
+import {client} from "@/lib/sanity";
 
-export const Footer = () => {
+const getCTA = async () => {
+    const query = `*[_type == "product" && "CTA" in status[]->name]`
+    return await client.fetch(query)
+}
+
+export const Footer = async() => {
+    const ctaData = await getCTA()
+
     return (
         <footer className='bg-gradient-to-t from-[#F9F0E5] via-[#F9F0E5]/[0.18] to-transparent py-[84px]'>
             <div className='container mx-auto flex flex-col items-center'>
@@ -19,7 +27,7 @@ export const Footer = () => {
                         In eget ipsum et felis finibus consequat.
                     </p>
                 </div>
-                <CtaCarousel/>
+                <CtaCarousel ctaData={ctaData}/>
                 <div className='pb-[18px] pt-[58px]'>
                     <button className='gap-x-2 hover:pl-2 transition-all duration-300 w-[374px]'>Customize Your Outfit<BsArrowRight className='text-2xl'/></button>
                     <div className='flex items-center gap-x-4'>

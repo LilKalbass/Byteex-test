@@ -11,9 +11,14 @@ const getFeaturedTestimonial = async () => {
     const query = `*[_type == "item" && status->name == "Active"]`
     return await client.fetch(query)
 }
+const getFeaturedProducts = async () => {
+    const query = `*[_type == "product" && "Hero" in status[]->name]`
+    return await client.fetch(query)
+}
 
 export const Hero = async () => {
-    const testF = await getFeaturedTestimonial()
+    const featuredTestim = await getFeaturedTestimonial()
+    const displayedProducts = await getFeaturedProducts()
 
     return (
         <section className='pt-8 z-50'>
@@ -51,11 +56,11 @@ export const Hero = async () => {
                             <BsArrowRight className='text-2xl'/>
                         </button>
                         <div className='absolute -bottom-20'>
-                            <FeaturedTestimonial test={testF} />
+                            <FeaturedTestimonial test={featuredTestim} />
                         </div>
                     </div>
                     <div className='flex items-center'>
-                        <HeroCarousel/>
+                        <HeroCarousel data={displayedProducts}/>
                     </div>
                 </div>
             </div>

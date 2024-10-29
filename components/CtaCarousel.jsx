@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CtaCarousel = () => {
+export const CtaCarousel = ({ctaData}) => {
     return (
         <div>CtaCarousel</div>
     )

@@ -9,10 +9,15 @@ const getGallery = async () => {
     const query = `*[_type == 'gallery']`
     return await client.fetch(query)
 }
+const getTestimonials = async () => {
+    const query = `*[_type == 'item']`
+    return await client.fetch(query)
+}
 
 
 export const Testimonial = async () => {
     const gallery = await getGallery()
+    const testimData = await getTestimonials()
 
     return (
         <section className='pt-[64px]'>
@@ -28,7 +33,7 @@ export const Testimonial = async () => {
             </div>
             <Gallery gallery = {gallery[0].images}/>
             <div className='container mx-auto pt-[76px]'>
-                <TestimonialCarousel/>
+                <TestimonialCarousel data={testimData}/>
                 <div className='flex flex-col items-center gap-y-[10px]'>
                     <div className='flex'>
                         <button className='gap-x-2 hover:pl-2 transition-all duration-300 w-[369]'>

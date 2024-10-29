@@ -6,7 +6,7 @@ import {PiWaves} from "react-icons/pi";
 import {client} from "@/lib/sanity";
 
 const getFeaturedProducts = async () => {
-    const query = `*[_type == "product"]`
+    const query = `*[_type == "product" && "About" in status[]->name]`
     return await client.fetch(query)
 }
 
