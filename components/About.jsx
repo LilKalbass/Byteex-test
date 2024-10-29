@@ -3,10 +3,16 @@ import Image from "next/image";
 import {AboutCarousel} from "@/components/AboutCarousel";
 import {TbShoppingCartCheck, TbSunMoon, TbLeaf} from "react-icons/tb";
 import {PiWaves} from "react-icons/pi";
+import {client} from "@/lib/sanity";
 
+const getFeaturedProducts = async () => {
+    const query = `*[_type == "product"]`
+    return await client.fetch(query)
+}
 
+export const About = async () => {
+    const displayedProducts = await getFeaturedProducts()
 
-export const About = () => {
     return (
         <section className='bg-gradient-to-b from-[#F9F0E5] via-[#F9F0E5]/[0.18] to-transparent pt-[78px] pb-[54px]'>
             <div className='container mx-auto'>
@@ -89,7 +95,7 @@ export const About = () => {
                         </div>
                     </div>
                     <div className='flex flex-col w-[540px]'>
-                        <AboutCarousel/>
+                        <AboutCarousel data={displayedProducts}/>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,7 @@ import {FeaturedTestimonial} from "@/components/FeaturedTestimonial";
 import {HeroCarousel} from "@/components/HeroCarousel";
 
 const getFeaturedTestimonial = async () => {
-    const query = `*[_type == 'item']`
+    const query = `*[_type == "item" && status->name == "Active"]`
     return await client.fetch(query)
 }
 

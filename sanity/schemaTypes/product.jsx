@@ -12,6 +12,12 @@ export default {
             name: 'image',
             title: "Product Image",
             type: 'image'
+        },
+        {
+            name: 'status',
+            title: "Status",
+            type: 'array',
+            of: [{type: 'reference', to: {type: 'status'}}]
         }
     ]
 }

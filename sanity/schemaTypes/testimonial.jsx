@@ -22,6 +22,12 @@ export default {
             name: 'rating',
             title: "Rating",
             type: 'number'
+        },
+        {
+            name: 'status',
+            title: "Status",
+            type: 'reference',
+            to: {type: 'status'}
         }
     ]
 }

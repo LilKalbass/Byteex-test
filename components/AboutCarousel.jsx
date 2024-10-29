@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const AboutCarousel = () => {
+export const AboutCarousel = ({data}) => {
     return (
         <div>AboutCarousel</div>
     )
