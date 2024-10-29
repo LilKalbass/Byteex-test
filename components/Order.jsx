@@ -1,5 +1,5 @@
 import React from 'react'
-import {TbShoppingCartCheck, TbSunMoon, TbTruck} from "react-icons/tb";
+import {TbShoppingCartCheck, TbSunMoon} from "react-icons/tb";
 import {BsArrowRight, BsTruck} from "react-icons/bs";
 import {Rating} from "@/components/Rating";
 

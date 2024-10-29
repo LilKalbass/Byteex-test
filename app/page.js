@@ -10,7 +10,7 @@ import {Faq} from "@/components/Faq";
 export default function Home() {
   return (
       <main>
-          <div className='overflow-hidden h-full'>
+          <div className='overflow-hidden'>
               <Hero/>
               <About/>
               <Explore/>

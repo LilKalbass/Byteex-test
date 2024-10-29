@@ -1,15 +1,12 @@
 import React from 'react'
 import Image from "next/image";
 import { FaqQA } from "@/components/FaqQA";
-import { client } from "@/lib/sanity";
+import {getQAData} from "@/lib/sanityQueries";
 
-const getQAData = async () => {
-    const query = `*[_type == 'faqQA']`;
-    return await client.fetch(query);
-};
 
 export const Faq = async () => {
     const qa = await getQAData();
+
     return (
             <section className='pt-[110px] pb-[118px]'>
             <div className='container mx-auto grid lg:grid-cols-2 gap-x-[88px]'>

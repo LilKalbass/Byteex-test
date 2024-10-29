@@ -3,15 +3,11 @@ import Image from "next/image";
 import {AboutCarousel} from "@/components/AboutCarousel";
 import {TbShoppingCartCheck, TbSunMoon, TbLeaf} from "react-icons/tb";
 import {PiWaves} from "react-icons/pi";
-import {client} from "@/lib/sanity";
+import {getFeaturedProductsAbout} from "@/lib/sanityQueries";
 
-const getFeaturedProducts = async () => {
-    const query = `*[_type == "product" && "About" in status[]->name]`
-    return await client.fetch(query)
-}
 
 export const About = async () => {
-    const displayedProducts = await getFeaturedProducts()
+    const displayedProducts = await getFeaturedProductsAbout()
 
     return (
         <section className='bg-gradient-to-b from-[#F9F0E5] via-[#F9F0E5]/[0.18] to-transparent pt-[78px] pb-[54px]'>

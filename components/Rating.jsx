@@ -1,4 +1,4 @@
-import { IoIosStarOutline,IoIosStarHalf, IoIosStar } from "react-icons/io";
+import { IoIosStarOutline, IoIosStar } from "react-icons/io";
 
 export const Rating = ({ value}) =>
 {

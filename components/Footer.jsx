@@ -1,17 +1,12 @@
 import React from 'react'
 import {CtaCarousel} from "@/components/CtaCarousel";
 import {BsArrowRight} from "react-icons/bs";
-import {TbBolt, TbClockHour3, TbCloudExclamation, TbDropletDown, TbShoppingCartCheck} from "react-icons/tb";
+import {TbClockHour3, TbCloudExclamation, TbShoppingCartCheck} from "react-icons/tb";
 import {GrAmex} from "react-icons/gr";
-import {FaApplePay, FaCcDiscover, FaCcMastercard, FaCcVisa, FaGooglePay, FaPaypal} from "react-icons/fa";
+import {FaApplePay, FaCcDiscover, FaCcMastercard, FaGooglePay, FaPaypal} from "react-icons/fa";
 import {RiVisaLine} from "react-icons/ri";
 import {GoShieldCheck} from "react-icons/go";
-import {client} from "@/lib/sanity";
-
-const getCTA = async () => {
-    const query = `*[_type == "product" && "CTA" in status[]->name]`
-    return await client.fetch(query)
-}
+import {getCTA} from "@/lib/sanityQueries";
 
 export const Footer = async() => {
     const ctaData = await getCTA()

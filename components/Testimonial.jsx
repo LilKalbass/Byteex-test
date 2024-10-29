@@ -1,19 +1,9 @@
 import React from 'react'
 import {Gallery} from "@/components/Gallery";
-import {client} from "@/lib/sanity";
 import {TestimonialCarousel} from "@/components/TestimonialCarousel";
 import {BsArrowRight} from "react-icons/bs";
 import {Rating} from "@/components/Rating";
-
-const getGallery = async () => {
-    const query = `*[_type == 'gallery']`
-    return await client.fetch(query)
-}
-const getTestimonials = async () => {
-    const query = `*[_type == 'item']`
-    return await client.fetch(query)
-}
-
+import {getGallery, getTestimonials} from "@/lib/sanityQueries";
 
 export const Testimonial = async () => {
     const gallery = await getGallery()

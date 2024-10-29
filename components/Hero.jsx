@@ -3,22 +3,13 @@ import Image from "next/image";
 import {TbShoppingCartCheck, TbSunMoon} from "react-icons/tb";
 import {PiWaves} from "react-icons/pi";
 import {BsArrowRight} from "react-icons/bs";
-import {client} from "@/lib/sanity";
 import {FeaturedTestimonial} from "@/components/FeaturedTestimonial";
 import {HeroCarousel} from "@/components/HeroCarousel";
-
-const getFeaturedTestimonial = async () => {
-    const query = `*[_type == "item" && status->name == "Active"]`
-    return await client.fetch(query)
-}
-const getFeaturedProducts = async () => {
-    const query = `*[_type == "product" && "Hero" in status[]->name]`
-    return await client.fetch(query)
-}
+import {getFeaturedProductsHero, getFeaturedTestimonial} from "@/lib/sanityQueries";
 
 export const Hero = async () => {
     const featuredTestim = await getFeaturedTestimonial()
-    const displayedProducts = await getFeaturedProducts()
+    const displayedProducts = await getFeaturedProductsHero()
 
     return (
         <section className='pt-8 z-50'>
