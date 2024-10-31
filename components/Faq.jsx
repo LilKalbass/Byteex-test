@@ -10,15 +10,12 @@ export const Faq = async () => {
     return (
             <section className='pt-[110px] pb-[118px]'>
             <div className='container mx-auto grid lg:grid-cols-2 gap-x-[88px]'>
-                {/* FAQ Section */}
-                <div className='flex flex-col max-w-2xl'>
+                <div className='flex flex-col xl:max-w-2xl'>
                     <h2 className='text-[32px] leading-[40px] text-[#01005B] pb-[24px]'>Frequently asked questions.</h2>
                     <FaqQA faqData={qa} />
                 </div>
 
-                {/* Image Section */}
-                <div className='relative grid place-items-center '>
-                    {/* Center Image */}
+                <div className='relative xl:grid place-items-center hidden'>
                     <div className='absolute top-36 z-10'>
                         <Image
                             src="/assets/faq/faqImg2.jpg"
@@ -28,7 +25,6 @@ export const Faq = async () => {
                             className="w-full shadow-md"
                         />
                     </div>
-                    {/* Top Right Image */}
                     <div className="absolute top-0 right-20 ">
                         <Image
                             src="/assets/faq/faqImg1.jpg"
@@ -38,7 +34,6 @@ export const Faq = async () => {
                             className="w-full relative shadow-md"
                         />
                     </div>
-                    {/* Bottom Left Image */}
                     <div className="absolute top-[440px] left-20">
                         <Image
                             src="/assets/faq/faqImg3.jpg"

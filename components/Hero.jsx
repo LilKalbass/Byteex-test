@@ -12,14 +12,14 @@ export const Hero = async () => {
     const displayedProducts = await getFeaturedProductsHero()
 
     return (
-        <section className='pt-8 z-50'>
+        <section className='pt-8 z-50 flex items-center'>
             <div className='container mx-auto'>
-                <div className='pb-[62px]'>
+                <div className='pb-[62px] flex ph:justify-center tb:justify-start'>
                     <Image src='/assets/Logo.svg' alt='logo_img' className='object-contain' width={200} height={36}/>
                 </div>
-                <div className='flex justify-between relative '>
-                    <div className='flex flex-col'>
-                        <h1 className='text-[38px] leading-[46px] text-[#01005B] pb-[26px] max-w-[530px]'>
+                <div className='flex relative justify-between'>
+                    <div className='flex flex-col pl:items-center md:items-start'>
+                        <h1 className='text-[38px] leading-[46px] text-[#01005B] pb-[26px] max-w-[530px] pl:text-center md:text-left'>
                             Don’t apologize for being comfortable.
                         </h1>
                         <div className='flex flex-col gap-y-6 pb-10'>
@@ -50,8 +50,8 @@ export const Hero = async () => {
                             <FeaturedTestimonial test={featuredTestim} />
                         </div>
                     </div>
-                    <div className='flex items-center'>
-                        <HeroCarousel data={displayedProducts}/>
+                    <div className='hidden md:flex'>
+                        <HeroCarousel displayedProducts = {displayedProducts}/>
                     </div>
                 </div>
             </div>

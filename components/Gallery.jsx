@@ -4,7 +4,7 @@ import {urlFor} from "@/lib/sanity";
 
 export const Gallery = ({gallery}) => {
     return (
-        <div className='flex gap-y-[6px] gap-x-[6px] flex-wrap max-w-[1468px] mx-auto'>
+        <div className='flex gap-y-[6px] gap-x-[6px] ph:justify-center flex-wrap max-w-[1468px] mx-auto'>
             {gallery.map((image) => {
                 return (
                     <div key = {image._key}>

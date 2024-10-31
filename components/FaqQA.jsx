@@ -15,7 +15,7 @@ export const FaqQA = ({ faqData }) => {
     return (
         <>
             {faqData.map((data) => (
-                <div key={data._id} className='border-y border-[#EAEAEA] w-[630px] cursor-pointer' onClick={() => toggleFaq(data._id)}>
+                <div key={data._id} className='border-y border-[#EAEAEA] xl:w-[630px] w-full cursor-pointer' onClick={() => toggleFaq(data._id)}>
                     <div className='flex items-center justify-between py-[28px]'>
                         <h6 className='text-[18px] leading-[24px] text-[#01005B]'>{data.question}</h6>
                         <div className='transition-all duration-500 text-2xl'>

@@ -12,13 +12,13 @@ export const About = async () => {
     return (
         <section className='bg-gradient-to-b from-[#F9F0E5] via-[#F9F0E5]/[0.18] to-transparent pt-[78px] pb-[54px]'>
             <div className='container mx-auto'>
-                <div className='flex flex-col gap-y-4'>
+                <div className='flex flex-col gap-y-4 mt-[16px] xl:mt-0'>
                     <h4 className='text-[20px] text-center leading-[24px] text-[#868787]'>as seen in</h4>
                     <div className = 'flex justify-between items-center'>
-                        <div className='mr-4'>
+                        <div className='lg:mr-4 pl:mr-0'>
                             <Image src='/assets/partnersLogos/Artboard1.svg' alt='logoPart_Img' width={178} height={22}/>
                         </div>
-                        <div className='mr-8'>
+                        <div className='lg:mr-8 pl:mr-0'>
                             <Image src='/assets/partnersLogos/Artboard2.svg' alt='logoPart_Img' width={111} height={52}/>
                         </div>
                         <div>
@@ -32,9 +32,10 @@ export const About = async () => {
                         </div>
                     </div>
                 </div>
-                <div className='pt-[110px] flex gap-x-[180px] justify-center'>
-                    <div className='flex flex-col'>
-                        <h2 className='text-[32px] leading-[40px] text-[#01005B] pb-[74px]'>Loungewear you can be proud of.</h2>
+                <h2 className='text-[32px] leading-[40px] text-[#01005B] text-center pt-[52px] justify-center flex tb:hidden'>Loungewear you can be proud of.</h2>
+                <div className='pt-[110px] flex justify-between ph:flex-col md:flex-row ph:items-center md:items-start'>
+                    <div className='flex flex-col  ph:order-2 md:order-1'>
+                        <h2 className='text-[32px] leading-[40px] text-[#01005B] pb-[74px] tb:flex hidden'>Loungewear you can be proud of.</h2>
                         <div className='flex flex-col gap-y-4'>
                             <div className='flex gap-x-[30px] max-w-[500px]'>
                                 <div className=''>
@@ -90,7 +91,7 @@ export const About = async () => {
                             </div>
                         </div>
                     </div>
-                    <div className='flex flex-col w-[540px]'>
+                    <div className='flex ph:order-1 md:order-2 ph:mb-[84px] md:mb-0'>
                         <AboutCarousel data={displayedProducts}/>
                     </div>
                 </div>

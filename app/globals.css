@@ -12,4 +12,27 @@
   button {
     @apply flex items-center justify-center bg-[#01005B] text-[#FFFFFF] text-[18px] leading-[24px] py-[18px] w-[332px] h-[56px] rounded-md
   }
+
+  /*.swiper-slide-active{*/
+  /*    scale: 125%;*/
+  /*}*/
+  /*.thumbs .swiper-slide-active .swiper-slide-thumb-active{*/
+  /*    scale: 125%;*/
+  /*}*/
+
+  /*.thumbs .swiper-slide:nth-child(1):active{*/
+  /*    opacity: 0.75;*/
+  /*    scale: 125%;*/
+  /*}*/
+}
+.thumbs .swiper-slide {
+  opacity: 0.75;
+}
+
+.thumbs .swiper-slide-thumb-active  {
+  opacity: 1;
+  /*scale: 125%;*/
+}
+.swiper-button-prev,.swiper-button-next {
+  color: #676869 !important;
 }

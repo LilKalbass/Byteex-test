@@ -11,7 +11,7 @@ export const Testimonial = async () => {
 
     return (
         <section className='pt-[64px]'>
-            <div className='container mx-auto'>
+            <div className='container mx-auto '>
                 <div className='flex flex-col items-center text-center gap-y-[32px] pb-[54px]'>
                     <h2 className='text-[32px] leading-[40px] text-[#01005B]'>What are our fans saying?</h2>
                     <p className='text-[16px] leading-[24px] text-[#676869] max-w-[590px]'>
@@ -22,8 +22,8 @@ export const Testimonial = async () => {
                 </div>
             </div>
             <Gallery gallery = {gallery[0].images}/>
+            <TestimonialCarousel testimData={testimData}/>
             <div className='container mx-auto pt-[76px]'>
-                <TestimonialCarousel data={testimData}/>
                 <div className='flex flex-col items-center gap-y-[10px]'>
                     <div className='flex'>
                         <button className='gap-x-2 hover:pl-2 transition-all duration-300 w-[369]'>

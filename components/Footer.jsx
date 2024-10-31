@@ -16,16 +16,19 @@ export const Footer = async() => {
             <div className='container mx-auto flex flex-col items-center'>
                 <div className='flex flex-col items-center gap-y-[52px] text-center pb-[88px]'>
                     <h2 className='text-[32px] leading-[40px] text-[#01005B]'>Find something you love.</h2>
-                    <p className='text-[16px] leading-[22px] text-[#676869] max-w-[588px]'>
+                    <p className='text-[16px] leading-[22px] text-[#676869] max-w-[588px] ph:hidden md:flex'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Fusce lobortis sapien facilisis tincidunt pellentesque.
                         In eget ipsum et felis finibus consequat.
+                    </p>
+                    <p className='text-[16px] leading-[22px] text-[#676869] max-w-[588px] ph:flex md:hidden'>
+                        Click below to browse our collection!
                     </p>
                 </div>
                 <CtaCarousel ctaData={ctaData}/>
                 <div className='pb-[18px] pt-[58px]'>
                     <button className='gap-x-2 hover:pl-2 transition-all duration-300 w-[374px]'>Customize Your Outfit<BsArrowRight className='text-2xl'/></button>
-                    <div className='flex items-center gap-x-4 pt-2'>
+                    <div className='md:flex ph:hidden items-center gap-x-4 pt-2'>
                         <div className='flex items-center text-[#1FAD40] gap-x-1'>
                             <TbClockHour3 className='text-sm'/>
                             <p className='text-[10px] leading-[18px]'>Ships in 1-2 Days</p>
@@ -41,7 +44,7 @@ export const Footer = async() => {
                         </div>
                     </div>
                 </div>
-                <div className='flex'>
+                <div className='md:flex ph:hidden'>
                     <div className=' flex items-center  py-[14px] gap-x-[12px] border-r'>
                         <TbCloudExclamation className='text-5xl text-[#676869] bg-[#01005B] bg-opacity-10 py-[10px] px-[6px] rounded-full'/>
                         <p className='text-[14px] leading-[20px] text-[#676869] max-w-[152px]'>

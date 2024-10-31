@@ -4,8 +4,9 @@ import Image from "next/image";
 export const Explore = () => {
     return (
         <section className='bg-[#F0EEEF] pt-[130px] pb-[100px]'>
-            <div className='container mx-auto flex flex-col lg:flex-row gap-x-[162px] lg:items-start'>
-                <div className='relative w-full lg:w-1/2'>
+            <div className='container mx-auto flex flex-col lg:flex-row gap-x-[162px] lg:items-start ph:items-center'>
+                <h2 className='text-[32px] leading-[40px] text-[#2A2996] pb-[40px] text-center ph:flex xl:hidden justify-center'>Be your best self.</h2>
+                <div className='relative lg:w-1/2 ph:mb-[76px] xl:mb-0'>
                     <div className="relative w-4/5 mx-auto">
                         <Image width={382} height={570} src="/assets/explore/explore.webp" alt="Main Image" className="w-full shadow-md"/>
                     </div>
@@ -19,7 +20,7 @@ export const Explore = () => {
                     </div>
                 </div>
                 <div className='flex-col lg:w-1/2'>
-                    <h2 className='text-[32px] leading-[40px] text-[#2A2996] pb-[40px]'>Be your best self.</h2>
+                    <h2 className='text-[32px] leading-[40px] text-[#2A2996] pb-[40px] ph:hidden xl:flex '>Be your best self.</h2>
                     <div className='text-[16px] leading-[24px] text-[#6C6C6C] gap-y-[20px] flex flex-col'>
                         <p className=''>
                             Hi! My name’s [Insert Name], and I founded [Insert] in ____.
@@ -50,7 +51,7 @@ export const Explore = () => {
                         <p className='pb-[10px]'>
                             Cras mattis varius mollis
                         </p>
-                        <button>Customize Your Outfit</button>
+                        <button className='xl:flex ph:hidden'>Customize Your Outfit</button>
                     </div>
                 </div>
             </div>

@@ -8,10 +8,15 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '112px'
+      padding: {
+        DEFAULT: '92px',
+        ph: '20px',
+        tb: '20px',
+        md:'64px'
+      },
     },
     screens: {
-      ph: '320px',
+      ph: '360px',
       pl: '500px',
       sm: '640px',
       tb: '768px',

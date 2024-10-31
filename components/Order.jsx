@@ -8,24 +8,24 @@ export const Order = () => {
         <section>
             <div className='container mx-auto pt-[76px]'>
                 <h2 className='text-center text-[#01005B] text-[32px] leading-[40px] pb-[46px]'>Comfort made easy</h2>
-                <div className='flex gap-x-10 justify-center pb-[56px]'>
+                <div className='flex xl:gap-x-10 md:gap-x-6  justify-center pb-[56px]'>
                     <div className='flex flex-col items-center bg-[#F0EEEF] px-[36px] py-[78px] rounded-xl cursor-pointer hover:scale-110 transition-all duration-500'>
                         <TbShoppingCartCheck className='text-[#01005B] text-6xl'/>
-                        <h4 className='text-[22px] leading-[40px] text-[#01005B] pb-[20px] pt-[16px]'>You save.</h4>
+                        <h4 className='text-[22px] leading-[40px] text-center text-[#01005B] pb-[20px] pt-[16px]'>You save.</h4>
                         <p className='text-[16px] leading-[24px] text-[#676869] max-w-[280px] text-center'>
                             Browse our comfort sets and save 15% when you bundle.
                         </p>
                     </div>
                     <div className='flex flex-col items-center bg-[#F9F0E6] px-[36px] py-[78px] rounded-xl cursor-pointer hover:scale-110 transition-all duration-500'>
                         <BsTruck className='text-[#01005B] text-6xl'/>
-                        <h4 className='text-[22px] leading-[40px] text-[#01005B] pb-[20px] pt-[16px]'>We ship.</h4>
+                        <h4 className='text-[22px] leading-[40px] text-center text-[#01005B] pb-[20px] pt-[16px]'>We ship.</h4>
                         <p className='text-[16px] leading-[24px] text-[#676869] max-w-[280px] text-center'>
                             We ship your items within 1-2 days of receiving your order.
                         </p>
                     </div>
                     <div className='flex flex-col items-center bg-[#F0EEEF] px-[36px] py-[78px] rounded-xl cursor-pointer hover:scale-110 transition-all duration-500'>
                         <TbSunMoon className='text-[#01005B] text-6xl'/>
-                        <h4 className='text-[22px] leading-[40px] text-[#01005B] pb-[20px] pt-[16px]'>You enjoy!</h4>
+                        <h4 className='text-[22px] leading-[40px] text-center text-[#01005B] pb-[20px] pt-[16px]'>You enjoy!</h4>
                         <p className='text-[16px] leading-[24px] text-[#676869] max-w-[280px] text-center'>
                             Wear hernest around the house, out on the town, or in bed.
                         </p>
